@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Post Publisher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Facebook Post Publisher</h1>
+            <p class="subtitle">Manage your Facebook posts efficiently</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Facebook Login Section -->
+            <div class="section login-section">
+                <h2>Facebook Login</h2>
+                <div id="fb-root"></div>
+                <button id="loginBtn" class="btn btn-primary">Login with Facebook</button>
+                <div id="loginStatus" class="status-message" style="display: none;"></div>
+            </div>
+
+            <!-- Post Form Section -->
+            <div class="section form-section" id="formSection" style="display: none;">
+                <h2>Create New Post</h2>
+                <form id="postForm">
+                    <div class="form-group">
+                        <label for="postTitle">Post Title</label>
+                        <input 
+                            type="text" 
+                            id="postTitle" 
+                            name="title" 
+                            placeholder="Enter post title" 
+                            required
+                        >
+                        <small>Optional: Give your post a title</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postContent">Post Content</label>
+                        <textarea 
+                            id="postContent" 
+                            name="content" 
+                            placeholder="Enter your post content here..." 
+                            rows="6"
+                            required
+                        ></textarea>
+                        <small>Required: Enter the main content of your post</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postImage">Post Image</label>
+                        <input 
+                            type="file" 
+                            id="postImage" 
+                            name="image" 
+                            accept="image/*"
+                        >
+                        <small>Optional: Upload an image to accompany your post</small>
+                        <div id="imagePreview" class="image-preview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pageId">Facebook Page ID</label>
+                        <input 
+                            type="text" 
+                            id="pageId" 
+                            name="pageId" 
+                            placeholder="Your Facebook page ID" 
+                            required
+                        >
+                        <small>Required: The ID of the Facebook page where you want to publish</small>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-success">📤 Publish Post</button>
+                        <button type="button" id="logoutBtn" class="btn btn-danger">Logout</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Status Messages -->
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;"></div>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Publishing post...</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🔒 This application uses HTTPS with self-signed certificates for secure communication</p>
+            <p>Version 1.0 | Facebook Post Publisher</p>
+        </div>
+    </div>
+
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" 
+        nonce="NONCE_VALUE">
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>

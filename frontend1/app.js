@@ -26,7 +26,8 @@ window.fbAsyncInit = function () {
         appId: FACEBOOK_APP_ID,
         cookie: true,
         xfbml: false, // Desactivado para evitar intentos de renderizado en frames
-        version: 'v18.0'
+        version: 'v18.0',
+        status: true,
     });
 
     isFbInitialized = true;
@@ -62,7 +63,7 @@ btnLogin.addEventListener('click', () => {
 
     FB.login(function (response) {
         statusChangeCallback(response);
-    }, { scope: 'public_profile,email,pages_manage_posts' }); // Permisos necesarios
+    }, { scope: 'public_profile,email,pages_manage_posts,ages_manage_metadata' }); // Permisos necesarios
 // }, { scope: 'public_profile,email,pages_manage_posts,publish_video' }); // Permisos necesarios
 });
 
