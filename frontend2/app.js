@@ -147,7 +147,7 @@ async function publishPost() {
             
             // Convert image to base64
             const base64Image = await fileToBase64(imageFile);
-            postData.picture = base64Image;
+            // postData.picture = base64Image;
         }
 
         // Publish to Facebook
