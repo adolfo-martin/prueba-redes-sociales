@@ -93,7 +93,7 @@ btnPublish.addEventListener('click', () => {
 
     // IMPORTANTE: Facebook no puede "leer" localhost para generar una vista previa.
     // Para probar, usaremos una URL pública si estamos en localhost.
-    const shareUrl = window.location.hostname === 'adomargon.abrdns.com' || window.location.hostname === '188.76.228.209' 
+    const shareUrl = window.location.hostname === 'adolfo-martin.github.io' || window.location.hostname === '188.76.228.209' 
         ? 'adomargon.abrdns.com' // Cambia esto por tu sitio web real cuando esté en línea
         : window.location.href;
 
