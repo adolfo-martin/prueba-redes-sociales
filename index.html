@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook API Test - Publicador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div class="container">
+        <header>
+            <h1>Publicador de Facebook</h1>
+            <p>Prueba la integración con la Graph API</p>
+        </header>
+
+        <main>
+            <div id="login-section" class="card">
+                <button id="btn-login" class="btn-primary">Iniciar sesión con Facebook</button>
+                <p id="status" class="status-text">No conectado</p>
+            </div>
+
+            <section id="publish-section" class="card hidden">
+                <div class="form-group">
+                    <label for="post-title">Título de la publicación</label>
+                    <input type="text" id="post-title" placeholder="Escribe un título pegajoso...">
+                </div>
+
+                <div class="form-group">
+                    <label for="post-content">Contenido del post</label>
+                    <textarea id="post-content" rows="4" placeholder="¿Qué estás pensando?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="post-image">Imagen de la publicación</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="post-image" accept="image/*">
+                        <div id="image-preview" class="preview-container hidden">
+                            <img src="" alt="Vista previa">
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btn-publish" class="btn-success">Publicar en Facebook</button>
+                <div id="publish-status"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- SDK de Facebook -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
