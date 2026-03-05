@@ -1,5 +1,5 @@
 // Facebook App Configuration
-const FACEBOOK_APP_ID = 'YOUR_FACEBOOK_APP_ID'; // Replace with your Facebook App ID
+const FACEBOOK_APP_ID = '1256644736404295'; // Replace with your Facebook App ID
 const API_VERSION = 'v18.0';
 
 // DOM Elements
