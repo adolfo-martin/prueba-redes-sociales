@@ -1,0 +1,12 @@
+https://adomargon.abrdns.com
+
+### Páginas a las que el usuario tiene acceso
+GET https://graph.facebook.com/me/accounts
+
+pageToken =  data[0].access_token;
+pageId = data[0].id;
+
+
+POST  https://graph.facebook.com/989113290956937/feed
+
+
